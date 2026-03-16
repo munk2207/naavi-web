@@ -214,7 +214,7 @@ export default function Page() {
               },
               {
                 name: 'MyChart', icon: '🏥', note: 'Refill due April 10',
-                url: 'https://www.mychart.com',
+                url: 'https://mycarecompass.lifelabs.com/',
                 tooltip: 'Naavi connects to your health portal via a secure Canadian standard (FHIR). It reads upcoming appointments, medications, and lab trends — and cross-references them with your calendar.',
               },
               {

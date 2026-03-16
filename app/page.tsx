@@ -218,8 +218,8 @@ export default function Page() {
                 tooltip: 'Naavi connects to your health portal via a secure Canadian standard (FHIR). It reads upcoming appointments, medications, and lab trends — and cross-references them with your calendar.',
               },
               {
-                name: 'Ecobee', icon: '🌡️', note: '18°C — turned down last night',
-                url: 'https://www.ecobee.com',
+                name: 'Weather', icon: '🌡️', note: '18°C — turned down last night',
+                url: 'https://www.theweathernetwork.com/en',
                 tooltip: 'Naavi reads and controls your thermostat. Say "turn the heat up" and it adjusts automatically. No app-switching required.',
               },
               {

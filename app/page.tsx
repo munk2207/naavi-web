@@ -202,23 +202,26 @@ export default function Page() {
           {/* Tool grid */}
           <div className="reveal grid grid-cols-2 sm:grid-cols-3 gap-4 mb-12">
             {[
-              { name: 'Google Calendar', icon: '📅', note: 'Doctor at 2pm' },
-              { name: 'Apple Notes',     icon: '📝', note: '"Call clinic about referral"' },
-              { name: 'MyChart',         icon: '🏥', note: 'Refill due April 10' },
-              { name: 'Ecobee',          icon: '🌡️', note: '18°C — turned down last night' },
-              { name: 'Voice Memos',     icon: '🎙️', note: '"Reminder: ask about Lisinopril"' },
-              { name: 'Health Portal',   icon: '📋', note: 'Lab results uploaded' },
+              { name: 'Google Calendar', icon: '📅', note: 'Doctor at 2pm',                    url: 'https://calendar.google.com' },
+              { name: 'Apple Notes',     icon: '📝', note: '"Call clinic about referral"',      url: 'https://www.icloud.com/notes' },
+              { name: 'MyChart',         icon: '🏥', note: 'Refill due April 10',               url: 'https://www.mychart.com' },
+              { name: 'Ecobee',          icon: '🌡️', note: '18°C — turned down last night',    url: 'https://www.ecobee.com' },
+              { name: 'Voice Memos',     icon: '🎙️', note: '"Reminder: ask about Lisinopril"', url: 'https://apps.apple.com/ca/app/voice-memos/id1069512134' },
+              { name: 'Health Portal',   icon: '📋', note: 'Lab results uploaded',              url: 'https://www.mychart.com' },
             ].map((tool) => (
-              <div
+              <a
                 key={tool.name}
-                className="border border-gray-200 rounded-2xl p-5 bg-gray-50 relative"
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-gray-200 rounded-2xl p-5 bg-gray-50 relative hover:border-naavi-300 hover:bg-naavi-50 transition-colors cursor-pointer group"
               >
                 <div className="text-2xl mb-2">{tool.icon}</div>
-                <div className="font-medium text-sm text-gray-800 mb-1">{tool.name}</div>
+                <div className="font-medium text-sm text-gray-800 mb-1 group-hover:text-naavi-700 transition-colors">{tool.name}</div>
                 <div className="text-xs text-gray-400 italic">"{tool.note}"</div>
                 {/* Disconnected indicator */}
                 <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-gray-300" title="Not connected to other tools" />
-              </div>
+              </a>
             ))}
           </div>
 

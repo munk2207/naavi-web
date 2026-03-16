@@ -208,9 +208,9 @@ export default function Page() {
                 tooltip: 'Naavi reads your events every 15 minutes and classifies them as medical, social, or personal using your care team and relationship data.',
               },
               {
-                name: 'Apple Notes', icon: '📝', note: '"Call clinic about referral"',
-                url: 'https://www.icloud.com/notes',
-                tooltip: 'Naavi scans your notes for action items and unresolved tasks, turning them into tracked threads it follows up on.',
+                name: 'Google Keep', icon: '📌', note: '"Call clinic about referral"',
+                url: 'https://keep.google.com',
+                tooltip: 'Naavi reads your Google Keep notes and extracts action items and unresolved tasks, turning them into tracked threads it follows up on.',
               },
               {
                 name: 'MyChart', icon: '🏥', note: 'Refill due April 10',

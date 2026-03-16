@@ -202,12 +202,36 @@ export default function Page() {
           {/* Tool grid */}
           <div className="reveal grid grid-cols-2 sm:grid-cols-3 gap-4 mb-12">
             {[
-              { name: 'Google Calendar', icon: '📅', note: 'Doctor at 2pm',                    url: 'https://calendar.google.com' },
-              { name: 'Apple Notes',     icon: '📝', note: '"Call clinic about referral"',      url: 'https://www.icloud.com/notes' },
-              { name: 'MyChart',         icon: '🏥', note: 'Refill due April 10',               url: 'https://www.mychart.com' },
-              { name: 'Ecobee',          icon: '🌡️', note: '18°C — turned down last night',    url: 'https://www.ecobee.com' },
-              { name: 'Voice Memos',     icon: '🎙️', note: '"Reminder: ask about Lisinopril"', url: 'https://apps.apple.com/ca/app/voice-memos/id1069512134' },
-              { name: 'Health Portal',   icon: '📋', note: 'Lab results uploaded',              url: 'https://www.mychart.com' },
+              {
+                name: 'Google Calendar', icon: '📅', note: 'Doctor at 2pm',
+                url: 'https://calendar.google.com',
+                tooltip: 'Naavi reads your events every 15 minutes and classifies them as medical, social, or personal using your care team and relationship data.',
+              },
+              {
+                name: 'Apple Notes', icon: '📝', note: '"Call clinic about referral"',
+                url: 'https://www.icloud.com/notes',
+                tooltip: 'Naavi scans your notes for action items and unresolved tasks, turning them into tracked threads it follows up on.',
+              },
+              {
+                name: 'MyChart', icon: '🏥', note: 'Refill due April 10',
+                url: 'https://www.mychart.com',
+                tooltip: 'Naavi connects to your health portal via a secure Canadian standard (FHIR). It reads upcoming appointments, medications, and lab trends — and cross-references them with your calendar.',
+              },
+              {
+                name: 'Ecobee', icon: '🌡️', note: '18°C — turned down last night',
+                url: 'https://www.ecobee.com',
+                tooltip: 'Naavi reads and controls your thermostat. Say "turn the heat up" and it adjusts automatically. No app-switching required.',
+              },
+              {
+                name: 'Voice Memos', icon: '🎙️', note: '"Reminder: ask about Lisinopril"',
+                url: 'https://apps.apple.com/ca/app/voice-memos/id1069512134',
+                tooltip: 'Naavi transcribes your voice memos and extracts reminders and tasks, adding them to your pending threads so nothing slips through.',
+              },
+              {
+                name: 'Health Portal', icon: '📋', note: 'Lab results uploaded',
+                url: 'https://www.mychart.com',
+                tooltip: 'Naavi monitors your portal for new lab results and appointment updates, surfacing only what is relevant — never raw numbers, always plain language.',
+              },
             ].map((tool) => (
               <a
                 key={tool.name}
@@ -220,7 +244,14 @@ export default function Page() {
                 <div className="font-medium text-sm text-gray-800 mb-1 group-hover:text-naavi-700 transition-colors">{tool.name}</div>
                 <div className="text-xs text-gray-400 italic">"{tool.note}"</div>
                 {/* Disconnected indicator */}
-                <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-gray-300" title="Not connected to other tools" />
+                <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-gray-300" />
+                {/* Tooltip */}
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 bg-naavi-900 text-white text-xs rounded-xl px-3 py-2.5 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10 shadow-lg">
+                  <div className="font-semibold text-naavi-300 mb-1">How Naavi connects</div>
+                  {tool.tooltip}
+                  {/* Arrow */}
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-naavi-900" />
+                </div>
               </a>
             ))}
           </div>

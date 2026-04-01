@@ -31,7 +31,7 @@ const conversation = [
   {
     speaker: 'naavi',
     text: "Morning. Four things on my radar — Dr. Patel at 2, a medication refill coming up, that clinic call you mentioned last week, and you haven't spoken to your brother in a while. Want to go through any of them?",
-    note: 'Naavi has already reviewed the calendar, health portal, and pending threads — before Robert says a word.',
+    note: 'MyNaavi has already reviewed the calendar, health portal, and pending threads — before Robert says a word.',
   },
   {
     speaker: 'robert',
@@ -82,7 +82,7 @@ const layers = [
   {
     number: '02',
     name: 'Edge Device',
-    description: "Robert's iPhone. All data syncs locally first, so Naavi works even without internet. His data stays on his device by default.",
+    description: "Robert's iPhone. All data syncs locally first, so MyNaavi works even without internet. His data stays on his device by default.",
     color: 'bg-naavi-50',
     text: 'text-naavi-800',
     border: 'border-naavi-100',
@@ -90,7 +90,7 @@ const layers = [
   {
     number: '03',
     name: 'Integration Layer',
-    description: 'Naavi reads from every tool — silently, in the background, every 15 minutes. It normalises everything into one shared picture.',
+    description: 'MyNaavi reads from every tool — silently, in the background, every 15 minutes. It normalises everything into one shared picture.',
     color: 'bg-naavi-50',
     text: 'text-naavi-800',
     border: 'border-naavi-100',
@@ -106,7 +106,7 @@ const layers = [
   {
     number: '05',
     name: 'Cognitive Profile',
-    description: "Naavi's persistent memory. It grows over time — learning Robert's rhythms, relationships, preferences, and patterns.",
+    description: "MyNaavi's persistent memory. It grows over time — learning Robert's rhythms, relationships, preferences, and patterns.",
     color: 'bg-naavi-800',
     text: 'text-white',
     border: 'border-naavi-700',
@@ -123,12 +123,12 @@ const principles = [
   {
     icon: '🎙️',
     title: 'No audio stored — ever',
-    body: "Naavi listens, transcribes, then discards the audio immediately. Only the text of what Robert said is retained — and only the text he'd expect.",
+    body: "MyNaavi listens, transcribes, then discards the audio immediately. Only the text of what Robert said is retained — and only the text he'd expect.",
   },
   {
     icon: '🧱',
     title: 'Boundaries are enforced in code',
-    body: 'Robert chose not to connect his banking. Naavi will never ask again. Boundaries are not guidelines — they are hard rules built into the system.',
+    body: 'Robert chose not to connect his banking. MyNaavi will never ask again. Boundaries are not guidelines — they are hard rules built into the system.',
   },
   {
     icon: '🗑️',
@@ -150,7 +150,7 @@ export default function Page() {
       {/* ── NAV ── */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="text-naavi-800 font-semibold text-lg tracking-tight">Naavi</span>
+          <span className="text-naavi-800 font-semibold text-lg tracking-tight">MyNaavi</span>
           <div className="hidden sm:flex items-center gap-8 text-sm text-gray-500">
             <a href="#problem"      className="hover:text-naavi-700 transition-colors">The Problem</a>
             <a href="#checkin"      className="hover:text-naavi-700 transition-colors">Morning Check-in</a>
@@ -173,7 +173,7 @@ export default function Page() {
             Robert is sharp. His calendar, health portal, notes, and smart home
             are not talking to each other. He connects the dots manually. Every day.
             <br /><br />
-            <span className="text-naavi-700 font-medium">Naavi connects them for him.</span>
+            <span className="text-naavi-700 font-medium">MyNaavi connects them for him.</span>
           </p>
           <a
             href="#problem"
@@ -205,32 +205,32 @@ export default function Page() {
               {
                 name: 'Google Calendar', icon: '📅', note: 'Doctor at 2pm',
                 url: 'https://calendar.google.com',
-                tooltip: 'Naavi reads your events every 15 minutes and classifies them as medical, social, or personal using your care team and relationship data.',
+                tooltip: 'MyNaavi reads your events every 15 minutes and classifies them as medical, social, or personal using your care team and relationship data.',
               },
               {
                 name: 'Google Keep', icon: '📌', note: '"Call clinic about referral"',
                 url: 'https://keep.google.com',
-                tooltip: 'Naavi reads your Google Keep notes and extracts action items and unresolved tasks, turning them into tracked threads it follows up on.',
+                tooltip: 'MyNaavi reads your Google Keep notes and extracts action items and unresolved tasks, turning them into tracked threads it follows up on.',
               },
-              {
+              
                 name: 'MyChart', icon: '🏥', note: 'Refill due April 10',
                 url: 'https://mycarecompass.lifelabs.com/',
-                tooltip: 'Naavi connects to your health portal via a secure Canadian standard (FHIR). It reads upcoming appointments, medications, and lab trends — and cross-references them with your calendar.',
+                tooltip: 'MyNaavi connects to your health portal via a secure Canadian standard (FHIR). It reads upcoming appointments, medications, and lab trends — and cross-references them with your calendar.',
               },
               {
                 name: 'Weather', icon: '🌡️', note: '18°C — turned down last night',
                 url: 'https://www.theweathernetwork.com/en',
-                tooltip: 'Naavi reads and controls your thermostat. Say "turn the heat up" and it adjusts automatically. No app-switching required.',
+                tooltip: 'MyNaavi reads and controls your thermostat. Say "turn the heat up" and it adjusts automatically. No app-switching required.',
               },
               {
                 name: 'Voice Memos', icon: '🎙️', note: '"Reminder: ask about Lisinopril"',
                 url: 'https://apps.apple.com/ca/app/voice-memos/id1069512134',
-                tooltip: 'Naavi transcribes your voice memos and extracts reminders and tasks, adding them to your pending threads so nothing slips through.',
+                tooltip: 'MyNaavi transcribes your voice memos and extracts reminders and tasks, adding them to your pending threads so nothing slips through.',
               },
               {
                 name: 'Health Portal', icon: '📋', note: 'Lab results uploaded',
                 url: 'https://www.mychart.com',
-                tooltip: 'Naavi monitors your portal for new lab results and appointment updates, surfacing only what is relevant — never raw numbers, always plain language.',
+                tooltip: 'MyNaavi monitors your portal for new lab results and appointment updates, surfacing only what is relevant — never raw numbers, always plain language.',
               },
             ].map((tool) => (
               <a
@@ -247,7 +247,7 @@ export default function Page() {
                 <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-gray-300" />
                 {/* Tooltip */}
                 <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 bg-naavi-900 text-white text-xs rounded-xl px-3 py-2.5 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10 shadow-lg">
-                  <div className="font-semibold text-naavi-300 mb-1">How Naavi connects</div>
+                  <div className="font-semibold text-naavi-300 mb-1">How MyNaavi connects</div>
                   {tool.tooltip}
                   {/* Arrow */}
                   <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-naavi-900" />
@@ -273,10 +273,10 @@ export default function Page() {
         <div className="max-w-5xl mx-auto">
           <div className="reveal text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              How Naavi works
+              How MyNaavi works
             </h2>
             <p className="text-gray-500 text-lg max-w-xl mx-auto">
-              Naavi does not replace Robert's tools. It sits above them — reading everything, remembering everything, and surfacing only what matters.
+              MyNaavi does not replace Robert's tools. It sits above them — reading everything, remembering everything, and surfacing only what matters.
             </p>
           </div>
 
@@ -285,19 +285,19 @@ export default function Page() {
               {
                 step: '01',
                 title: 'Listens',
-                body: 'Robert speaks naturally. Naavi understands English and French, handles mid-sentence switching, and responds in whichever language Robert used.',
+                body: 'Robert speaks naturally. MyNaavi understands English and French, handles mid-sentence switching, and responds in whichever language Robert used.',
                 icon: '🎙️',
               },
               {
                 step: '02',
                 title: 'Learns',
-                body: "Over time, Naavi builds a Cognitive Profile — Robert's daily rhythms, relationships, health context, and preferences. It learns without being taught.",
+                body: "Over time, MyNaavi builds a Cognitive Profile — Robert's daily rhythms, relationships, health context, and preferences. It learns without being taught.",
                 icon: '🧠',
               },
               {
                 step: '03',
                 title: 'Orchestrates',
-                body: 'Every morning, before Robert reaches for his phone, Naavi has already reviewed his day and assembled a brief. The answer is ready before the question.',
+                body: 'Every morning, before Robert reaches for his phone, MyNaavi has already reviewed his day and assembled a brief. The answer is ready before the question.',
                 icon: '⚡',
               },
             ].map((item) => (
@@ -320,7 +320,7 @@ export default function Page() {
               The morning check-in
             </h2>
             <p className="text-gray-500 text-lg max-w-xl mx-auto">
-              Every morning, Naavi opens with an answer — not a question.
+              Every morning, MyNaavi opens with an answer — not a question.
               It has already reviewed Robert's day so he does not have to.
             </p>
           </div>
@@ -333,7 +333,7 @@ export default function Page() {
                 <div className="phone-screen">
                   {/* Status bar */}
                   <div className="phone-status-bar">
-                    <span className="text-white/60 text-[10px] font-medium">Naavi</span>
+                    <span className="text-white/60 text-[10px] font-medium">MyNaavi</span>
                   </div>
 
                   {/* Time header */}
@@ -346,7 +346,7 @@ export default function Page() {
                     {conversation.map((msg, i) => (
                       <div key={i} className={`flex flex-col ${msg.speaker === 'robert' ? 'items-end' : 'items-start'}`}>
                         <p className={`bubble-label ${msg.speaker === 'naavi' ? 'bubble-label-naavi' : 'bubble-label-robert'}`}>
-                          {msg.speaker === 'naavi' ? 'Naavi' : 'Robert'}
+                          {msg.speaker === 'naavi' ? 'MyNaavi' : 'Robert'}
                         </p>
                         <div className={msg.speaker === 'naavi' ? 'bubble-naavi' : 'bubble-robert'}>
                           {msg.text}
@@ -361,7 +361,7 @@ export default function Page() {
             {/* Annotations */}
             <div className="flex-1 space-y-5">
               <p className="text-sm font-semibold text-naavi-700 uppercase tracking-widest mb-6">
-                What Naavi is doing
+                What MyNaavi is doing
               </p>
               {conversation
                 .filter((m) => m.note)
@@ -382,7 +382,7 @@ export default function Page() {
               <div className="mt-8 p-5 rounded-2xl bg-naavi-50 border border-naavi-100">
                 <p className="text-sm font-semibold text-naavi-800 mb-2">Design principle</p>
                 <p className="text-sm text-naavi-700 leading-relaxed">
-                  Naavi opens every morning check-in with the count and a question —
+                  MyNaavi opens every morning check-in with the count and a question —
                   never a greeting, never a health quiz. Robert is a peer. He came for the answer.
                 </p>
               </div>
@@ -399,7 +399,7 @@ export default function Page() {
               Five layers. One experience.
             </h2>
             <p className="text-gray-500 text-lg max-w-xl mx-auto">
-              Naavi is structured in layers — each with a clear responsibility,
+              MyNaavi is structured in layers — each with a clear responsibility,
               each invisible to Robert.
             </p>
           </div>
@@ -434,7 +434,7 @@ export default function Page() {
         <div className="max-w-5xl mx-auto">
           <div className="reveal text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Naavi's memory of Robert
+              MyNaavi's memory of Robert
             </h2>
             <p className="text-gray-500 text-lg max-w-xl mx-auto">
               The Cognitive Profile is not a database of facts.
@@ -532,7 +532,7 @@ export default function Page() {
             </h2>
             <p className="text-naavi-400 text-lg max-w-xl mx-auto">
               Robert is 68. His health data, his routines, his relationships —
-              these are not data points. They are his life. Naavi treats them that way.
+              these are not data points. They are his life. MyNaavi treats them that way.
             </p>
           </div>
 
@@ -567,10 +567,10 @@ export default function Page() {
                 Bilingual · English / Français
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                Robert switches languages. Naavi follows.
+                Robert switches languages. MyNaavi follows.
               </h2>
               <p className="text-gray-500 leading-relaxed">
-                When Robert says <em>"parle-moi en français"</em>, Naavi switches immediately —
+                When Robert says <em>"parle-moi en français"</em>, MyNaavi switches immediately —
                 no announcement, no delay. It uses Canadian French vocabulary and stays
                 in whichever language Robert used last.
               </p>
@@ -594,7 +594,7 @@ export default function Page() {
       <footer className="py-12 px-6 bg-gray-50 border-t border-gray-100">
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <span className="text-naavi-800 font-semibold text-base">Naavi</span>
+            <span className="text-naavi-800 font-semibold text-base">MyNaavi</span>
             <p className="text-gray-400 text-xs mt-1">Ottawa, Canada · Built for Robert.</p>
           </div>
           <div className="text-xs text-gray-400 text-center sm:text-right leading-relaxed">
